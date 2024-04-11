@@ -13,7 +13,7 @@ const Work = () => {
   useEffect(() => {
     const headers = async () => {
       try {
-          const response = await axios.get('http://localhost:3000/api/project/top3Proj');
+          const response = await axios.get('https://rishis-server-8l672.ondigitalocean.app/api/project/top3Proj');
           if (response.status === 200) {
               setProjDetails(response.data.projects);
           }

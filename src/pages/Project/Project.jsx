@@ -13,7 +13,7 @@ const Project = () => {
   useEffect(() => {
     const getProject = async () => {
       try {
-        const response = await axios.get(`http://localhost:3000/api/project/${id}`);
+        const response = await axios.get(`https://rishis-server-8l672.ondigitalocean.app/api/project/${id}`);
         if (response.status === 200) {
           setData(response.data);
         }

@@ -32,7 +32,7 @@ const MyProjects = ({ token, headers, setHeaders }) => {
         try {
             const authorization = "Bearer " + token;
             setButton(true);
-            const response = await axios.put(`http://localhost:3000/api/project/reorder`, {
+            const response = await axios.put(`https://rishis-server-8l672.ondigitalocean.app/api/project/reorder`, {
                 project: headers
             },
                 {

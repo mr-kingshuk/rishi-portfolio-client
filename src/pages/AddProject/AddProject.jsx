@@ -30,7 +30,7 @@ const AddProject = ({ token }) => {
     const authorization = "Bearer " + token;
     setLoading(true);
     try {
-      const response = await axios.post('http://localhost:3000/api/project', {
+      const response = await axios.post('https://rishis-server-8l672.ondigitalocean.app/api/project', {
         data,
         media,
         footer

@@ -12,7 +12,7 @@ const DeleteModal = ({ deleteModal, setDeleteModal, headers, setHeaders, token }
     useEffect(() => {
         const getProject = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/project/${_id}`);
+                const response = await axios.get(`https://rishis-server-8l672.ondigitalocean.app/api/project/${_id}`);
                 if (response.status === 200) {
                     setProject(response.data);
                 }
@@ -37,7 +37,7 @@ const DeleteModal = ({ deleteModal, setDeleteModal, headers, setHeaders, token }
             
             const authorization = "Bearer " + token;
             setLoading(true);
-            const response = await axios.delete(`http://localhost:3000/api/project/${_id}`, {
+            const response = await axios.delete(`https://rishis-server-8l672.ondigitalocean.app/api/project/${_id}`, {
                 headers: {
                     "Authorization": authorization, // Set authorization header with token
                 },

@@ -34,7 +34,7 @@ const UserNavbar = () => {
     useEffect(() => {
         const headers = async () => {
             try {
-                const response = await axios.get('http://localhost:3000/api/project/projectHeaders');
+                const response = await axios.get('https://rishis-server-8l672.ondigitalocean.app/api/project/projectHeaders');
                 if (response.status === 200) {
                     setHeaders(response.data.projects);
                 }

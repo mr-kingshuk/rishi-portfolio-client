@@ -11,7 +11,7 @@ const useLogin = (email, password) => {
         setIsLoading(true);
         setError(null);
 
-        const response = await fetch("http://localhost:3000/api/users/login", {
+        const response = await fetch("https://rishis-server-8l672.ondigitalocean.app/api/users/login", {
             method : 'POST',
             headers : {
                 'Content-Type' :'application/json'

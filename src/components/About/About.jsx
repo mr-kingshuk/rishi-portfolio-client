@@ -12,7 +12,7 @@ const About = () => {
   useEffect(() => {
     const general = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/general');
+        const response = await axios.get('https://rishis-server-8l672.ondigitalocean.app/api/general');
         if (response.status === 200) {
           setGeneral(response.data);
         }

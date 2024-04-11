@@ -14,7 +14,7 @@ const AddGeneral = ({ token, general, setGeneral }) => {
         setLoading(true);
         setMessage(null);
         try {
-            const response = await axios.put('http://localhost:3000/api/general', general, {
+            const response = await axios.put('https://rishis-server-8l672.ondigitalocean.app/api/general', general, {
                 headers: {
                     "Authorization": authorization, // Set authorization header with token
                 },

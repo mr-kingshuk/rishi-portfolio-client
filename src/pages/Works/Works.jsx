@@ -14,7 +14,7 @@ const Works = () => {
   useEffect(() => {
     const headers = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/api/project/allProj');
+        const response = await axios.get('https://rishis-server-8l672.ondigitalocean.app/api/project/allProj');
         if (response.status === 200) {
           setProjDetails(response.data.projects);
         }

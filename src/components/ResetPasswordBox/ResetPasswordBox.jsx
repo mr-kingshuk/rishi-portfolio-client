@@ -21,7 +21,7 @@ const ResetPasswordBox = () => {
     try {
       setIsLoading(true);
       setError(null);
-      const response = await fetch(`http://localhost:3000/api/password/reset-password/${id}`, {
+      const response = await fetch(`https://rishis-server-8l672.ondigitalocean.app/api/password/reset-password/${id}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
