@@ -1,0 +1,234 @@
+:root{
+    --sidebar-width: 10vw;
+}
+
+.container{
+    color: white;
+    height: 100vh;
+    width: var(--sidebar-width);
+    background-color: transparent;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 20;
+
+    padding: 35px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+    gap: 20px;
+    transition: background 0.2s ease-in-out;
+}
+
+.container:hover{
+    background-color: rgb(0, 0, 0, 0.65);
+}
+
+.logo{
+    background-color: transparent;
+
+    transition: all 0.05s ease-in-out;
+    cursor: pointer;
+    position: relative;
+}
+
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 10px;
+
+    transform: translate(25vw);
+    transition: all 0.2s ease-in-out;
+}
+
+
+.list_item > button,
+.dropdown_item, 
+.dropdown,
+.list_item .option_div > button{
+    font-family: 'Panchang', sans-serif;
+    font-weight: 200;
+    cursor: pointer;
+    color: white;
+    background: none;
+    border: none;
+    text-align: end;
+}
+
+.option_div{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.dropdown{
+    transition: all 0.05s ease-in-out;
+}
+
+.dropdown_menu{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 5px;
+    flex-direction: column;
+    margin-top: 8px;
+}
+
+.dropdown_item{
+    text-align: right;
+    font-size: 9px;
+}
+
+.hamburger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+
+    display: none;
+}
+
+.hamburger.active .line1 {
+    width: 50px;
+    transform:  translateY(25px) rotate(45deg);
+}
+
+.hamburger.active .line2 {
+    transform: translate(-100px);
+    opacity: 0;
+}
+
+.hamburger.active .line3 {
+    width: 50px;
+    transform: translateY(-4px) rotate(-45deg);
+}
+
+.line{
+    width: 40px;
+    height: 4px;
+    background-color: white;
+    transition: all 200ms ease-in-out;
+}
+
+.line1{
+    width: 23px;
+    align-self: flex-end;
+}
+
+.line3{
+    width: 23px;
+    align-self: flex-start;
+}
+
+/* hover animation */
+.hoverUnderline{
+    position: relative;
+}
+
+.hoverUnderline::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #D970E8;
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-out;
+}
+
+button.hoverUnderline:hover, .hoverUnderline:hover{
+    color: #D970E8;
+}
+  
+.hoverUnderline:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom right;
+}
+
+@media screen and (min-width: 750px) {
+    .container:hover .list{
+        transform: translate(0);
+    }
+}
+
+
+
+@media screen and (max-width: 750px) {
+    .container{
+        top: 0;
+        left: 0;
+        z-index: 20;
+        width: 100vw;
+        height: 15vh;
+
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        transition: all 400ms ease-in-out;
+        background-color: transparent;
+        background-color: rgb(0, 0, 0, 0.95);
+    }
+
+    .container.vis{
+        background-color: rgb(0, 0, 0, 0.95);
+    }
+
+    .hamburger{
+        display: flex;
+    }
+
+    .list{
+        transform: translate(-200vw);
+        transition: all 400ms ease-in-out;
+        height: 86vh;
+        width: 100vw;
+        background-color: rgb(0, 0, 0, 0.95);
+        position: absolute;
+        top: 15vh;
+        right: 0;
+        z-index: 15;
+
+        padding-top: 30%;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 20px;
+    }
+
+    .list.visible{
+        transform: translate(0);
+    }
+
+    .list_item> button,
+    .list_item .option_div > button
+    {
+        font-size: 22px;
+    }
+
+    .option_div{
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .dropdown {
+        transform: scale(1.4);
+    }
+    
+    .dropdown_menu{
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .dropdown_item{
+        font-size: 12px;
+    }
+}

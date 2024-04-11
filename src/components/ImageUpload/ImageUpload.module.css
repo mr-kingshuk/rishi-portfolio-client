@@ -1,0 +1,116 @@
+.container{
+    border: 2px dashed rgb(90, 90, 252);
+    position: relative;
+    border-radius: 10px;
+    background-color: transparent;
+    padding: 25px 40px;
+    width: 100%;
+    margin: 30px 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.container .cloud_img{
+    width: 100px;
+}
+
+.header{
+    position: absolute;
+    top: -10px;
+    left: 24px;
+    background-color: black;
+    padding: 0 5px;
+
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 600;
+    font-size: 1.2em;
+}
+
+.container .cloud_img img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.container p{
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 600;
+    font-size: 1.3em;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.container .upload{
+    margin: 10px 0 5px;
+    font-weight: 200;
+    font-size: 1.4em;
+}
+
+.container .filetype{
+    margin: 5px 0 10px;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+.container .btn{
+    font-family: 'Panchang', sans-serif;
+    font-weight: 400;
+    padding: 10px 25px;
+    font-size: 1em;
+    color: white;
+    outline: none;
+    border: none;
+    border-radius: 25px;
+    background-color: navy;
+    cursor: pointer;
+
+    margin: 10px 0 0;
+}
+
+.container .btn:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transform: scale(1.02);
+    transition: all 0.2s ease-in-out;
+}
+
+/* progress bar */
+.progressBarWrapper {
+   width: 100%;
+   margin: 10px 0;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 5px;
+}
+
+.progressBarValue {
+    color: #ffffff;
+}
+
+progress {
+    width: 80%;
+    height: 13px;
+    border-radius: 20px;
+    background-color: white;
+    transition: width 300ms ease;
+}
+
+progress[value]::-webkit-progress-bar {
+    width: 100%;
+    height: 13px;
+    border-radius: 20px;
+    background-color: #000000;
+    border: 2px solid white;
+    transition: width 300ms ease;
+}
+
+progress[value]::-webkit-progress-value {
+    width: 0;
+    border-radius: 50px;
+    background-color: white;
+    transition: width 300ms ease;
+}

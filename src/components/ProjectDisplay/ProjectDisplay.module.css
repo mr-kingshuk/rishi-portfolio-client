@@ -1,0 +1,155 @@
+.outer{
+    width: 100%;
+    background-color: black;
+}
+
+.heroImage{
+    width: 100%;
+    aspect-ratio: 19/6;
+}
+
+.content{
+    height: 50%;
+    background: white;
+    padding: 54px 135px;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.content .heading{
+    font-family: 'Panchang', sans-serif;
+    font-weight: 600;
+    font-size: 32px;
+    color: black;
+}
+
+.content .sub_heading{
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 600;
+    font-size: 24px;
+    color: black;
+} 
+
+.content .details{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    width: 100%;
+}
+
+.content .brief{
+    flex: 0 0 60%;
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: black;
+    line-height: 15px;
+}
+
+.content .about{
+    flex: 0 0 30%;
+}
+
+.content .about .title{
+    font-family:  sans-serif;
+    font-weight: bolder;
+    font-size: 13px;
+    color: black;
+}
+
+.content .about .value{
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    color: black;
+}
+
+.media_comp{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 10px;
+    background-color: black;
+    padding-top: 15px;
+}
+
+.cat {
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 5px;
+    padding: 0 135px;
+}
+
+.cat .title{
+    font-family:  sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+
+.cat .valuecon{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+}
+
+.cat .value, .valuecon a{
+    display: block;
+    font-family: 'Metropolis', sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: white;
+}
+
+@media screen and (max-width: 750px) {
+    .outer{
+        padding-top: 6vh;
+    }
+
+    .heroImage{
+        min-height: 30vh;
+    }
+
+    .content{
+        padding: 20px 25px;
+    }
+
+    .footer{
+        padding: 10px 0;
+    }
+
+    .cat{
+        padding: 0 25px;
+    }
+
+    .content .details{
+        flex-direction: column-reverse;
+        gap: 12px;
+    }
+
+    .brief{
+        flex: 0 0 100%;
+        margin-bottom: 10px;
+    }
+
+    .about{
+        flex: 0 0 100%;
+    }
+}

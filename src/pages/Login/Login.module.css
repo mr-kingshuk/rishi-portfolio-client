@@ -1,0 +1,9 @@
+.outer{
+    background-color: black;
+    min-height: 100vh;
+    padding-top: 10vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
