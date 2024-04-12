@@ -19,3 +19,9 @@
     height: 100%;
     object-fit: cover;
 }
+
+@media screen and (max-width: 750px) {
+    .video{
+        z-index: 5;
+    }
+}

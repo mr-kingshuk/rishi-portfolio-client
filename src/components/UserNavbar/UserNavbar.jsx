@@ -15,6 +15,7 @@ const UserNavbar = () => {
 
     const handleScroll = (to) => {
         setClick(false);
+        setDropdown(false);
         const scrollIntoViewAfterNav = () => {
             const element = document.querySelector(`#${to}`);
             if (element) {
@@ -87,7 +88,11 @@ const UserNavbar = () => {
                                 <div
                                     key={header._id}
                                     className={`${styles.dropdown_item} ${styles.hoverUnderline}`}
-                                    onClick={() => navigate(`/project/${header._id}`)}
+                                    onClick={() => {
+                                        setClick(false);
+                                        setDropdown(false);
+                                        navigate(`/project/${header._id}`);
+                                    }}
                                 >
                                     {header.heading}
                                 </div>
