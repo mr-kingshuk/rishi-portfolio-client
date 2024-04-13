@@ -184,6 +184,7 @@ button.hoverUnderline:hover, .hoverUnderline:hover{
 
     .hamburger{
         display: flex;
+        gap: 7px;
     }
 
     .line{
