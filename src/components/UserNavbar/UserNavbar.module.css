@@ -203,7 +203,7 @@ button.hoverUnderline:hover, .hoverUnderline:hover{
 
     .hamburger.active .line1 {
         width: 35px;
-        transform:  translateY(19px) rotate(45deg);
+        transform:  translateY(13px) rotate(45deg);
     }
     
     .hamburger.active .line2 {
