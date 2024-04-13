@@ -83,7 +83,7 @@
     align-items: flex-start;
     gap: 10px;
     background-color: black;
-    padding-top: 15px;
+    padding: 15px 0 20px;
 }
 
 .cat {
@@ -119,10 +119,6 @@
 }
 
 @media screen and (max-width: 750px) {
-    .outer{
-        padding-top: 6vh;
-    }
-
     .heroImage{
         min-height: 30vh;
     }

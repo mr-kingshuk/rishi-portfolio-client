@@ -37,7 +37,7 @@ const ProjectDisplay = ({ data }) => {
                 {data.media && data.media.map((med, index) => <MediaComponent med={med} key={index} />)}
             </div>
             <div className={styles.footer}>
-                {data.guidedBy.length > 0 &&
+                {data.guidedBy.length > 0 && 
                     <div className={styles.cat}>
                         <span className={styles.title}>Guided By: </span>
                         <div className={styles.valuecon}>

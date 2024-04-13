@@ -62,7 +62,7 @@ const UserNavbar = () => {
                 <div className={`${styles.line} ${styles.line2}`}></div>
                 <div className={`${styles.line} ${styles.line3}`}></div>
             </div>
-            <div className={`${styles.list}  ${click ? styles.visible : null}`}>
+            <div className={`${styles.list}  ${click ? styles.visible : null}`} onMouseLeave={() => setDropdown(false)}>
                 <div className={styles.list_item}>
                     <button onClick={() => handleScroll('hero')} className={styles.hoverUnderline}>Home</button>
                 </div>
