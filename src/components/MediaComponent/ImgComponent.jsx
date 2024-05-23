@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Blurhash } from 'react-blurhash';
+import styles from './MediaComponent.module.css';
 
 const ImgComponent = ({ src, hash }) => {
   const [imageLoaded, setImageLoaded] = useState(false);
@@ -29,7 +30,7 @@ const ImgComponent = ({ src, hash }) => {
           punch={1}
         />
       </div>
-      <img ref={imageRef} style={{ display : !imageLoaded ? 'none' : 'inline'}} src={src} alt="" />
+      <img ref={imageRef} className={styles.image} style={{ display : !imageLoaded ? 'none' : 'inline'}} src={src} alt="Image of media" />
     </>
   );
 };

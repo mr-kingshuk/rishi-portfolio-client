@@ -20,7 +20,7 @@ const MediaComponent = ({ med }) => {
         if (ext === 'gif') {
             return (
             <div className={styles.img}>
-                <img src={med.url} alt="" />
+                <img src={med.url} alt="Gif of Media" />
             </div>);
         }
         else {

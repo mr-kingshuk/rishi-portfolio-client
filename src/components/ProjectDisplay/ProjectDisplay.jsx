@@ -34,7 +34,11 @@ const ProjectDisplay = ({ data }) => {
                 </div>
             </div>
             <div className={styles.media_comp}>
-                {data.media && data.media.map((med, index) => <MediaComponent med={med} key={index} />)}
+                {data.media && data.media.map((med, index) => {
+                    return (<div className={styles.med}>
+                        <MediaComponent med={med} key={index} />
+                    </div>);
+                })}
             </div>
             <div className={styles.footer}>
                 {data.guidedBy.length > 0 && 

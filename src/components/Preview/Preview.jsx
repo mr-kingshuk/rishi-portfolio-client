@@ -35,7 +35,13 @@ const Preview = ({ data, media, footer }) => {
                 </div>
             </div>
             <div className={styles.media_comp}>
-                {media && media.map((med, index) => <MediaComponent med={med} key={index} />)}
+                {media && media.map((med, index) =>{
+                    return(
+                        <div className={styles.med}>
+                            <MediaComponent med={med} key={index} />
+                        </div>
+                    )
+                })}
             </div>
             <div className={styles.footer}>
                 {footer.guidedBy.length > 0 &&
