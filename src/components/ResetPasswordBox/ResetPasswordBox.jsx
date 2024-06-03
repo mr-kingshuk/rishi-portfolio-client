@@ -3,7 +3,7 @@ import styles from './ResetPasswordBox.module.css';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const ResetPasswordBox = () => {
-  const { id } = useParams();
+  const { id, token } = useParams();
   const navigate = useNavigate();
 
   const [password, setPassword] = useState({
@@ -21,7 +21,7 @@ const ResetPasswordBox = () => {
     try {
       setIsLoading(true);
       setError(null);
-      const response = await fetch(`https://rishis-server-8l672.ondigitalocean.app/api/password/reset-password/${id}`, {
+      const response = await fetch(`https://rishis-server-8l672.ondigitalocean.app/api/password/reset-password/${id}/${token}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

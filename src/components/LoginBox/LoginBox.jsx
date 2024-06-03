@@ -21,7 +21,7 @@ const LoginBox = () => {
 
     const handlePassword = async () => {
         try{
-            const response = await fetch("http://localhost:3000/api/password/forget-password", {
+            const response = await fetch("https://rishis-server-8l672.ondigitalocean.app/api/password/forget-password", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

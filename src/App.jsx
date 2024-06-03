@@ -75,7 +75,7 @@ function App() {
               <ReorderProject token={token} />
             </Admin>} />
         <Route
-          path='/reset-password/:id'
+          path='/reset-password/:id/:token'
           element={
             <OutAdmin>
               <ResetPassword/>
