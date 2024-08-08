@@ -6,6 +6,7 @@ import AddGeneral from '../../components/addGeneral/AddGeneral.jsx';
 import MyProjects from '../../components/MyProjects/MyProjects.jsx';
 
 const ReorderProject = ({ token }) => {
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const [headers, setHeaders] = useState([]);
   const [general, setGeneral] = useState({
     brief: "",
@@ -15,7 +16,7 @@ const ReorderProject = ({ token }) => {
   useEffect(() => {
     const headers = async () => {
       try {
-        const response = await axios.get('https://rishis-server-8l672.ondigitalocean.app/api/project/projectHeaders');
+        const response = await axios.get(`${API_BASE_URL}/api/project/projectHeaders`);
         if (response.status === 200) {
           setHeaders(response.data.projects);
         }
@@ -32,7 +33,7 @@ const ReorderProject = ({ token }) => {
 
     const general = async () => {
       try {
-        const response = await axios.get('https://rishis-server-8l672.ondigitalocean.app/api/general');
+        const response = await axios.get(`${API_BASE_URL}/api/general`);
         if (response.status === 200) {
           setGeneral(response.data);
         }

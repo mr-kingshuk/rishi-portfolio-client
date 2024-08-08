@@ -7,13 +7,14 @@ import { motion } from 'framer-motion';
 import axios from 'axios';
 
 const Work = () => {
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const navigate = useNavigate();
   const [projDetails, setProjDetails] = useState([]);
 
   useEffect(() => {
     const headers = async () => {
       try {
-          const response = await axios.get('https://rishis-server-8l672.ondigitalocean.app/api/project/top3Proj');
+          const response = await axios.get(`${API_BASE_URL}/api/project/top3Proj`);
           if (response.status === 200) {
               setProjDetails(response.data.projects);
           }

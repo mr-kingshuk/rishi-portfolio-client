@@ -5,6 +5,7 @@ import axios from 'axios';
 import { deleteImage } from '../../utilities/deleteImage.js';
 
 const DeleteModal = ({ deleteModal, setDeleteModal, headers, setHeaders, token }) => {
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
     const { _id, index } = deleteModal;
     const [project, setProject] = useState(null);
     const [loading, setLoading] = useState(null);
@@ -12,7 +13,7 @@ const DeleteModal = ({ deleteModal, setDeleteModal, headers, setHeaders, token }
     useEffect(() => {
         const getProject = async () => {
             try {
-                const response = await axios.get(`https://rishis-server-8l672.ondigitalocean.app/api/project/${_id}`);
+                const response = await axios.get(`${API_BASE_URL}/api/project/${_id}`);
                 if (response.status === 200) {
                     setProject(response.data);
                 }
@@ -37,7 +38,7 @@ const DeleteModal = ({ deleteModal, setDeleteModal, headers, setHeaders, token }
             
             const authorization = "Bearer " + token;
             setLoading(true);
-            const response = await axios.delete(`https://rishis-server-8l672.ondigitalocean.app/api/project/${_id}`, {
+            const response = await axios.delete(`${API_BASE_URL}/api/project/${_id}`, {
                 headers: {
                     "Authorization": authorization, // Set authorization header with token
                 },

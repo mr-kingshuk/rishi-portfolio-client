@@ -4,6 +4,7 @@ import styles from './AddGeneral.module.css';
 import axios from 'axios';
 
 const AddGeneral = ({ token, general, setGeneral }) => {
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
     const [loading, setLoading] = useState(null);
     const [message, setMessage] = useState(null);
 
@@ -14,7 +15,7 @@ const AddGeneral = ({ token, general, setGeneral }) => {
         setLoading(true);
         setMessage(null);
         try {
-            const response = await axios.put('https://rishis-server-8l672.ondigitalocean.app/api/general', general, {
+            const response = await axios.put(`${API_BASE_URL}/api/general`, general, {
                 headers: {
                     "Authorization": authorization, // Set authorization header with token
                 },

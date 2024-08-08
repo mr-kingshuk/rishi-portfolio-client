@@ -7,6 +7,7 @@ import DeleteModal from '../DeleteModal/DeleteModal.jsx';
 import { DragDropContext, Droppable, Draggable } from 'react-beautiful-dnd';
 
 const MyProjects = ({ token, headers, setHeaders }) => {
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
     const navigate = useNavigate();
     const [deleteModal, setDeleteModal] = useState({
         _id: null,
@@ -32,7 +33,7 @@ const MyProjects = ({ token, headers, setHeaders }) => {
         try {
             const authorization = "Bearer " + token;
             setButton(true);
-            const response = await axios.put(`https://rishis-server-8l672.ondigitalocean.app/api/project/reorder`, {
+            const response = await axios.put(`${API_BASE_URL}/api/project/reorder`, {
                 project: headers
             },
                 {

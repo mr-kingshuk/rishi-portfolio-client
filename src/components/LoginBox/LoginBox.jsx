@@ -3,6 +3,7 @@ import useLogin from '../../hooks/useLogin.jsx';
 import styles from './LoginBox.module.css';
 
 const LoginBox = () => {
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [showPassword, setShowPassword] = useState(false);
@@ -21,7 +22,7 @@ const LoginBox = () => {
 
     const handlePassword = async () => {
         try{
-            const response = await fetch("https://rishis-server-8l672.ondigitalocean.app/api/password/forget-password", {
+            const response = await fetch(`${API_BASE_URL}/api/password/forget-password`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

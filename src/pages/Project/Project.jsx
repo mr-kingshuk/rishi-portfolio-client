@@ -6,6 +6,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import ProjectDisplay from '../../components/ProjectDisplay/ProjectDisplay.jsx'
 
 const Project = () => {
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const { id } = useParams();
   const navigate = useNavigate();
   const [data, setData] = useState({});
@@ -13,7 +14,7 @@ const Project = () => {
   useEffect(() => {
     const getProject = async () => {
       try {
-        const response = await axios.get(`https://rishis-server-8l672.ondigitalocean.app/api/project/${id}`);
+        const response = await axios.get(`${API_BASE_URL}/api/project/${id}`);
         if (response.status === 200) {
           setData(response.data);
         }

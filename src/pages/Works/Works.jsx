@@ -8,13 +8,13 @@ import ProjectPreview from '../../components/ProjectPreview/ProjectPreview.jsx';
 
 const Works = () => {
   const navigate = useNavigate();
-
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const [projDetails, setProjDetails] = useState([]);
 
   useEffect(() => {
     const headers = async () => {
       try {
-        const response = await axios.get('https://rishis-server-8l672.ondigitalocean.app/api/project/allProj');
+        const response = await axios.get(`${API_BASE_URL}/api/project/allProj`);
         if (response.status === 200) {
           setProjDetails(response.data.projects);
         }

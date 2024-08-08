@@ -7,6 +7,7 @@ import Upload from '../../components/Upload/Upload.jsx';
 import Preview from '../../components/Preview/Preview.jsx';
 
 const AddProject = ({ token }) => {
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const navigate = useNavigate();
 
   const [data, setData] = useState({
@@ -30,7 +31,7 @@ const AddProject = ({ token }) => {
     const authorization = "Bearer " + token;
     setLoading(true);
     try {
-      const response = await axios.post('https://rishis-server-8l672.ondigitalocean.app/api/project', {
+      const response = await axios.post(`${API_BASE_URL}/api/project`, {
         data,
         media,
         footer

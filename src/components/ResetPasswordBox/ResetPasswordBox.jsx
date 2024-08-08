@@ -3,6 +3,7 @@ import styles from './ResetPasswordBox.module.css';
 import { useNavigate, useParams } from 'react-router-dom';
 
 const ResetPasswordBox = () => {
+  const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const { id, token } = useParams();
   const navigate = useNavigate();
 
@@ -21,7 +22,7 @@ const ResetPasswordBox = () => {
     try {
       setIsLoading(true);
       setError(null);
-      const response = await fetch(`https://rishis-server-8l672.ondigitalocean.app/api/password/reset-password/${id}/${token}`, {
+      const response = await fetch(`${API_BASE_URL}/api/password/reset-password/${id}/${token}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

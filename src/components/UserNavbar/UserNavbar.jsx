@@ -6,6 +6,7 @@ import axios from 'axios';
 import AnimateHeight from 'react-animate-height';
 
 const UserNavbar = () => {
+    const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
     const navigate = useNavigate();
     const location = useLocation();
     const [click, setClick] = useState(false);
@@ -35,7 +36,7 @@ const UserNavbar = () => {
     useEffect(() => {
         const headers = async () => {
             try {
-                const response = await axios.get('https://rishis-server-8l672.ondigitalocean.app/api/project/projectHeaders');
+                const response = await axios.get(`${API_BASE_URL}/api/project/projectHeaders`);
                 if (response.status === 200) {
                     setHeaders(response.data.projects);
                 }
