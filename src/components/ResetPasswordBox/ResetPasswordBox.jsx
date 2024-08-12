@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import styles from './ResetPasswordBox.module.css';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import useLogout from '../../hooks/useLogout.js';  
+import useLogout from '../../hooks/useLogout.jsx';  
 
 const ResetPasswordBox = () => {
   const logout = useLogout();
