@@ -34,7 +34,7 @@ const About = () => {
         <img className={styles.figure} src="./rishi.png" alt="image" />
       </div>
       <div className={styles.details}>
-        <motion.div
+        <motion.div 
           variants={{
             "initial": {
               y: -30,
