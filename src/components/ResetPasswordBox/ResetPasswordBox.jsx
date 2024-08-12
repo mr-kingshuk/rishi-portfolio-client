@@ -2,7 +2,10 @@ import React, { useState } from 'react';
 import styles from './ResetPasswordBox.module.css';
 import { useNavigate, useParams } from 'react-router-dom';
 
+import useLogout from '../../hooks/useLogout.js';  
+
 const ResetPasswordBox = () => {
+  const logout = useLogout();
   const API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
   const { id, token } = useParams();
   const navigate = useNavigate();
@@ -38,6 +41,7 @@ const ResetPasswordBox = () => {
         setError(json.error);
       }
       else {
+        logout();
         setIsLoading(false);
         navigate('/login');
       }
