@@ -77,9 +77,8 @@ function App() {
         <Route
           path='/reset-password/:id/:token'
           element={
-            <OutAdmin>
               <ResetPassword/>
-            </OutAdmin>} />
+            } />
         <Route
           path='*'
           element={<Navigate to="/" replace />} />
