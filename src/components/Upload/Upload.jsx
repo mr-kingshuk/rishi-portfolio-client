@@ -48,7 +48,6 @@ const Upload = ({ text, data, setData, submit, media, setMedia, footer, setFoote
     const handleFormInput = (e) => {
         const { name, value } = e.target;
         const newData = { ...data, [name]: value };
-        console.log(newData);
         setData(newData);
     }
 

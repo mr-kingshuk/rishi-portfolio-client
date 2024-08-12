@@ -12,7 +12,6 @@ const LoginBox = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log('submit')
         await login(email, password);
     };
 

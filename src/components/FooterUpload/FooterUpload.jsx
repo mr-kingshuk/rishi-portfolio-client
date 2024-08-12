@@ -21,7 +21,6 @@ const FooterUpload = ({ footer, setFooter }) => {
         if (event.key === 'Enter') {
             event.preventDefault();
             const newGuidedBy = [...footer.guidedBy, name];
-            console.log(newGuidedBy);
             setFooter({ ...footer, guidedBy: newGuidedBy });
             setName("");
         }
