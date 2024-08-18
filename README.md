@@ -1,4 +1,3 @@
-
 # Rishika Portfolio Website
 
 Server-side Repository is present at <a href="https://github.com/mr-kingshuk/rishi-portfolio-server" target="_blank" rel="noopener noreferrer">rishi-portfolio-server</a> 
@@ -11,10 +10,10 @@ Server-side Repository is present at <a href="https://github.com/mr-kingshuk/ris
 3. [Dependencies](#dependencies)
 4. [Environment Variables](#environment-variables)
 5. [Pages](#pages)
-    - [Guest Pages](#guest-pages)
     - [User Pages](#user-pages)
-    - [Worker Pages](#worker-pages)
-    - [Merchant Pages](#merchant-pages)
+    - [Login Page and Reset Password Page](#login-page-and-reset-password-page)
+    - [All Projects Admin side page](#all-projects-admin-side-page)
+    - [Add and Update Projects Admin side page](#add-and-update-projects-admin-side-page)
 6. [Contributing](#contributing)    
 7. [License](#license)
 
@@ -116,44 +115,34 @@ To run this project, you will need to add the following environment variables to
 
 ### **Note:** The following video contains *audio commentary* explaining the features and functionality. Please unmute the video for a complete understanding.
 
-https://github.com/user-attachments/assets/4807dcd5-ae65-4220-88ae-0bf61bc8290b
+https://github.com/user-attachments/assets/1bdd69e1-55ac-4b03-a468-b0b26c7397f7
 
 > *This video provides an overview of the HomePage, which is organized into four sections: the Hero Section, the About Section, the Works Section, and the Contact Section. From the Works Section, users are redirected to the Works Page, where they can access individual project details.*
 
-## Admin Pages
-
-<ins>1. Signup Page</ins>
+## Login Page and Reset Password Page
 
 ### **Note:** The following video contains *audio commentary* explaining the features and functionality. Please unmute the video for a complete understanding.
 
-https://github.com/user-attachments/assets/4807dcd5-ae65-4220-88ae-0bf61bc8290b
+https://github.com/user-attachments/assets/e0cb3b83-0916-46c6-afa3-c2846c7c5027
 
-> *This video illustrates the Signup Page and all its error handling in a brief manner.*
+> *This video illustrates the Login Page and all its error handling, along with the Reset Password Email functionality.*
 
-<ins>2. Reset Password Functionality</ins>
-
-### **Note:** The following video contains *audio commentary* explaining the features and functionality. Please unmute the video for a complete understanding.
-
-https://github.com/user-attachments/assets/4807dcd5-ae65-4220-88ae-0bf61bc8290b
-
-> *This video illustrates the forgot password page, the rest email, and the subsequent redirection to the rest page and their respective error handling.*
-
-<ins>4. Your Project Order</ins>
+## All Projects Admin side page
 
 ### **Note:** The following video contains *audio commentary* explaining the features and functionality. Please unmute the video for a complete understanding.
 
-https://github.com/user-attachments/assets/4807dcd5-ae65-4220-88ae-0bf61bc8290b
+https://github.com/user-attachments/assets/967bc28a-c8e6-42d7-925c-3765c46e0549
 
 > *This video illustrates the Projects Overview Page and the General section as viewed by the Admin. The Projects Overview section displays all user-added projects, which can be reordered using a drag-and-drop feature. Individual projects can also be deleted or updated.*
 
-
-<ins>5. Add/Update Project</ins>
+## Add and Update Projects Admin side page
 
 ### **Note:** The following video contains *audio commentary* explaining the features and functionality. Please unmute the video for a complete understanding.
 
-https://github.com/user-attachments/assets/4807dcd5-ae65-4220-88ae-0bf61bc8290b
+https://github.com/user-attachments/assets/981d22ac-82aa-4410-8ec2-5bd7336ac0b5
 
-> *This video demonstrates the "Add Projects" feature, allowing users to upload a Hero Image, input textual details, and arrange a series of project images using a drag-and-drop interface. The "Update Project" feature mirrors this layout, with pre-filled project information for easy updates.*
+> *This video demonstrates the "Add Projects" feature, allowing users to upload a Hero Image, input textual details, and arrange a series of project images using a drag-and-drop interface.*
+> *The image upload also features strict file size and type checks, shown in the video as well. The "Update Project" feature mirrors this layout, with pre-filled project information for easy updates.*
 
 ## Contributing
 
