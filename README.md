@@ -19,7 +19,7 @@ Server-side Repository is present at <a href="https://github.com/mr-kingshuk/ris
 
 ## Introduction
 
-[Rishika Garg](#https://www.linkedin.com/in/rishisdesign/), a **3rd-year Communication Design student from Nirma University**, approached me to develop her portfolio website, which she had carefully designed herself. She provided a detailed brief outlining the specific **animations and interactions** she wanted to showcase her work creatively. I accepted this challenge and built a **responsive website** that brought her vision to life, incorporating **seamless animations** and optimizing the **user experience across all devices**.The platform includes:
+<a href="https://www.linkedin.com/in/rishisdesign/" target="_blank" rel="noopener noreferrer">Rishika Garg</a>, a **3rd-year Communication Design student from Nirma University**, approached me to develop her portfolio website, which she had carefully designed herself. She provided a detailed brief outlining the specific **animations and interactions** she wanted to showcase her work creatively. I accepted this challenge and built a **responsive website** that brought her vision to life, incorporating **seamless animations** and optimizing the **user experience across all devices**. The platform includes:
 
 - <ins>**Advanced Content Management System (CMS)**</ins> with a modern drag-and-drop interface, enabling easy addition and update of projects by the client.
 - <ins>**Optimized media uploads to Firebase Storage**</ins>, with strict file type and size restrictions for efficient storage management and reduced upload times.
@@ -46,7 +46,7 @@ To set up the project locally, follow these steps:
 2. **Fill the `.env` file**: 
    - Use the `template.env` file as a reference to configure your environment variables.
 
-3. **Set up the database connection in server**:
+3. **Set up the database connection in the server**:
    - Add the database connection string of MongoDB from the MongoDB Atlas.
 
 4. **Install dependencies and run the server and client**:
@@ -64,7 +64,7 @@ To set up the project locally, follow these steps:
      ```
 
 5. **Add Admin User**:
-   - Alternatively, call the POST endpoint to add admin withe request body having the `email` and the `password`:
+   - Call the POST endpoint to add admin, with request body having the `email` and the `password`:
      ```
      POST http://localhost:3000/api/users/signup
      ```
@@ -113,7 +113,8 @@ To run this project, you will need to add the following environment variables to
 
 ## User Pages
 
-### **Note:** The following video contains *audio commentary* explaining the features and functionality. Please unmute the video for a complete understanding.
+### **Note:** The following video contains *audio commentary* explaining the features and functionality. 
+### Please unmute the video for a complete understanding. If you find it too fast, you can reduce playback speed to 0.75x or 0.5x.
 
 https://github.com/user-attachments/assets/1bdd69e1-55ac-4b03-a468-b0b26c7397f7
 
@@ -121,23 +122,26 @@ https://github.com/user-attachments/assets/1bdd69e1-55ac-4b03-a468-b0b26c7397f7
 
 ## Login Page and Reset Password Page
 
-### **Note:** The following video contains *audio commentary* explaining the features and functionality. Please unmute the video for a complete understanding.
+### **Note:** The following video contains *audio commentary* explaining the features and functionality. 
+### Please unmute the video for a complete understanding.
 
-https://github.com/user-attachments/assets/e0cb3b83-0916-46c6-afa3-c2846c7c5027
+https://github.com/user-attachments/assets/36af92a1-42c2-4911-a717-c4fb33dc0d5e
 
 > *This video illustrates the Login Page and all its error handling, along with the Reset Password Email functionality.*
 
 ## All Projects Admin side page
 
-### **Note:** The following video contains *audio commentary* explaining the features and functionality. Please unmute the video for a complete understanding.
+### **Note:** The following video contains *audio commentary* explaining the features and functionality. 
+### Please unmute the video for a complete understanding.
 
-https://github.com/user-attachments/assets/967bc28a-c8e6-42d7-925c-3765c46e0549
+https://github.com/user-attachments/assets/32f4c6e2-bc02-418c-9226-a222879a65bb
 
 > *This video illustrates the Projects Overview Page and the General section as viewed by the Admin. The Projects Overview section displays all user-added projects, which can be reordered using a drag-and-drop feature. Individual projects can also be deleted or updated.*
 
 ## Add and Update Projects Admin side page
 
-### **Note:** The following video contains *audio commentary* explaining the features and functionality. Please unmute the video for a complete understanding.
+### **Note:** The following video contains *audio commentary* explaining the features and functionality. 
+### Please unmute the video for a complete understanding. If you find it too fast, you can reduce playback speed to 0.75x or 0.5x.
 
 https://github.com/user-attachments/assets/981d22ac-82aa-4410-8ec2-5bd7336ac0b5
 
